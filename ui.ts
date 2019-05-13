@@ -1,4 +1,4 @@
-import { User } from "./models";
+import { User, Product } from "./models";
 import { generateHtmlNameList } from "./utils";
 import { Cart } from "./cart";
 
@@ -20,11 +20,17 @@ const users: User[] = [
 ]
 const button = document.getElementById('addButton') as HTMLButtonElement | null;
 const cartContainer = document.getElementById('cartContainer') as HTMLDivElement | null;
-const cart = new Cart(5);
+const cart = new Cart<Product>(5);
 if(button) {
     button.addEventListener('click', () => {
         if(input) {
-            cart.add({ name: input.value } );
+            cart.add(
+                { 
+                    description: 'Descr',
+                    price: 10,
+                    unit: 'kg',
+                    name: input.value 
+                } );
             if(cartContainer) {
                 cartContainer.innerHTML = '';
                 cartContainer.appendChild(generateHtmlNameList(cart.items))

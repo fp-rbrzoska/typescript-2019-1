@@ -1,6 +1,5 @@
-export interface Product {
-    name: string;
-    price: number;
-    unit: string;
+import { BaseProduct, ProductQuantityUnit } from "./base-product";
+
+export interface Product extends BaseProduct {
     description: string;
 }

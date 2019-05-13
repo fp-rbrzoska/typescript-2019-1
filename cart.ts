@@ -1,9 +1,11 @@
-export class Cart {
+import { BaseProduct } from "./models/base-product";
 
-    private _items: any[] = [];
+export class Cart<T extends BaseProduct> {
+
+    private _items: T[] = [];
     constructor(public itemsLimit: number) {}
 
-    add(item: any) {
+    add(item: T): void {
         if(this._items.length < this.itemsLimit) {
             this._items.push(item);
         } else {
@@ -11,7 +13,7 @@ export class Cart {
         }
     }
 
-    get items() {
+    get items(): T[] {
         return this._items;
     }
 
