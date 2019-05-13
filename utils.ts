@@ -1,6 +1,6 @@
 import { User } from "./models";
 
-export function generateHtmlNameList(arr: User[]): HTMLUListElement {
+export function generateHtmlNameList(arr: any[]): HTMLUListElement {
     let listEl = document.createElement('ul');
 
     arr.forEach(el => {
@@ -8,7 +8,7 @@ export function generateHtmlNameList(arr: User[]): HTMLUListElement {
         item.textContent = el.name;
         listEl.appendChild(item);
     })
-    
+
     return listEl;
 
 }
