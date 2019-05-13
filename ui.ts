@@ -1,6 +1,9 @@
 import { User, Product } from "./models";
 import { generateHtmlNameList } from "./utils";
 import { Cart } from "./cart";
+import $ from 'jquery';
+import {concat} from 'lodash';
+
 
 const input = document.getElementById('myInput') as HTMLInputElement | null
 
@@ -18,6 +21,7 @@ const users: User[] = [
         age: 45
     }
 ]
+const jQueryButton = $('#addButton');
 const button = document.getElementById('addButton') as HTMLButtonElement | null;
 const cartContainer = document.getElementById('cartContainer') as HTMLDivElement | null;
 const cart = new Cart<Product>(5);

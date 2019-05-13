@@ -18,10 +18,16 @@
   },
   "homepage": "https://github.com/fp-rbrzoska/typescript-2019-1#readme",
   "devDependencies": {
+    "@types/jquery": "^3.3.29",
+    "@types/lodash": "^4.14.126",
     "http-server": "^0.11.1",
     "ts-loader": "^6.0.0",
     "typescript": "^3.4.5",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.11"
   }
 }

@@ -1,4 +1,4 @@
-import { User } from "./models";
+import { User, Product } from "./models";
 
 export function generateHtmlNameList(arr: any[]): HTMLUListElement {
     let listEl = document.createElement('ul');
@@ -10,5 +10,16 @@ export function generateHtmlNameList(arr: any[]): HTMLUListElement {
     })
 
     return listEl;
-
 }
+
+function reverse(val: Product | User){
+    if(isProduct(val)) {
+    } 
+    else {
+    }
+}
+
+function isProduct(val: Product | User | string): val is Product {
+    return (<Product>val).description !== undefined;
+  }
+  
