@@ -1,3 +1,5 @@
+import { User } from "./models/user";
+
 let num: number = 1;
 let bool: boolean = true;
 let str: string = 'str';
@@ -11,17 +13,11 @@ let costamcostam;
 costamcostam = 'str';
 costamcostam = 2;
 
-interface User {
-    name: string;
-    age: number;
-    secondName?: string;
-}
-
 type NumberOrString = number | string;
 let nos: NumberOrString = 1;
 nos = 'jeden';
 
-let user: User = {
+export let user: User = {
     name: 'Alojzy',
     age: 65
 }

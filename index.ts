@@ -1,9 +1,11 @@
-interface Product {
-    name: string;
-    price: number;
-    unit: string;
-    description: string;
+import { user } from "./test";
+import { User, Product } from "./models";
+
+let newUser: User = {
+  age: 64,
+  name: 'Tomasz',
 }
+
 
 let product: Product = {
     name: 'Marchewka',
@@ -12,10 +14,11 @@ let product: Product = {
     description: 'Świeżutka marchewka'
     }
     
-    let cart: Product[] = [];
-    cart.push(product);
+let myVar;
+
+let cart: Product[] = [];
+cart.push(product);
     
     function buyProduct(prod: Product, quantity: number): number {
       return prod.price * quantity
     }
-    
